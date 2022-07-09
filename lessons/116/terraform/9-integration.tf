@@ -35,3 +35,7 @@ resource "aws_apigatewayv2_route" "get_echo" {
   route_key = "GET /echo"
   target    = "integrations/${aws_apigatewayv2_integration.eks.id}"
 }
+
+output "hello_base_url" {
+  value = "${aws_apigatewayv2_stage.dev.invoke_url}/echo"
+}
