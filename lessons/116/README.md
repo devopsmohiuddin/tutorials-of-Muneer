@@ -1,0 +1,2 @@
+- do not deploy application load balancer controller
+- do not deploy openid connect provider
